@@ -1,0 +1,42 @@
+// instruction code [32bit]
+// |imm[7bit]|rs2[5bit]|rs1[5bit]|funct3[3bit]|imm[5bit]|opcode[7bit|]
+// rs2 = x5, imm = 5, rs1 = x3
+
+// 1. sb : Store Byte
+// expected data : rs2[x5]값 중 1byte만 Memory[rs1[x3] + 5]에 있을거다 
+0000000_00101_00011_000_00101_0100011
+//rom[1] = 32'h0051_82a3;
+
+// 2. sh : Store Half
+// expected data : rs2[x5]값 중 2byte만 Memory[rs1[x2] + 5]에 있을거다 
+0000000_00101_00010_001_00101_0100011
+//rom[2] = 32'h0051_92a3
+
+// 3. sw : Store Word
+// expected data : rs2[x5]값 중 4byte만 Memory[rs1[x1] + 5]에 있을거다 
+0000000_00101_00001_010_00101_0100011
+//rom[3] = 32'h0051_a2a3;
+
+
+
+// instruction code [32bit]
+// |imm[12bit]|rs1[5bit]|funct3[3bit]|rd[5bit]|opcode[7bit|]
+// rd = x11, rs1 = x5(-5), imm = 6
+// rd = M[rs1 + imm][??]
+// rs1값과 imm값을 더한 수를 주소로하는 Memory 값을 rd에 넣어라
+
+// 1. lb : Load Byte
+0000_0000_0110_00011_000_01011_0000011
+
+
+// 2. lh : Load Half
+0000_0000_0101_00101_001_01011_0000011
+
+// 3. lw : Load Word
+0000_0000_0101_00101_010_01011_0000011
+
+// 4. lbu : Load Byte (U)
+0000_0000_0110_00011_100_01011_0000011
+
+// 5. lhu : Load Half (U)
+0000_0000_0110_00011_101_01011_0000011

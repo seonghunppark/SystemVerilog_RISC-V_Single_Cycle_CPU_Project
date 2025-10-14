@@ -1,0 +1,69 @@
+// instruction code [32bit]
+// |imm[12bit]|rs1[5bit]|funct3[3bit]|rd[5bit]|opcode[7bit|]
+// rd = x3, rs1 = x5, imm = 10
+
+
+// 1. addi
+// rd(주소값)에 rs1(주소값)의 value + imm을 Write
+// Expected data : reg(x3) = reg(x5) + 10
+0000_0000_1010_00101_000_00011_0010011
+//rom[1] = 32'h00a2_8193;
+
+// 2. xori
+// rd(주소값)에 rs1(주소값)의 value ^(xor) imm을 Write
+// Expected data : reg(x3) = reg(x5) ^ 10
+0000_0000_1010_00101_100_00011_0010011
+//rom[2] = 32'h00a2_c193;
+
+// 3. ori
+// rd(주소값)에 rs1(주소값)의 value |(or) imm을 Write
+// Expected data : reg(x3) = reg(x5) | 10
+0000_0000_1010_00101_110_00011_0010011
+//rom[3] = 32'h00a2e193;
+
+// 4. andi
+// rd(주소값)에 rs1(주소값)의 value &(and) imm을 Write
+// Expected data : reg(x3) = reg(x5) & 10
+0000_0000_1010_00101_111_00011_0010011
+//rom[4] = 32'h00a2_f193;
+
+// 5. slli
+// rd(주소값)에 rs1(주소값)의 value << imm[0:4]을 Write
+// 여기서 imm의 하위 5비트만 사용하는 이유는 register file의 하나의 메모리 크기
+// 32비트이기 때문에 32값 이상 shift하면 전부 overflow 혹은 underflow가 되기 때문
+// Expected data : reg(x3) = reg(x5) << 10
+0000_0000_1010_00101_001_00011_0010011
+//rom[5] = 32'h00a2_9193;
+
+// 6. srli
+// rd(주소값)에 rs1(주소값)의 value >> imm[0:4]을 Write
+// Expected data : reg(x3) = reg(x5) >> 10
+0000_0000_1010_00101_101_00011_0010011
+//rom[6] = 32'h00a2_d193;
+
+// 7. srai
+// rd(주소값)에 rs1(주소값)의 value >> imm[0:4] 값을 Msb extend해서 Write
+// Expected data : reg(x3) = $signed(reg(x5) >> 10)
+0100_0000_1010_00101_101_00011_0010011
+//rom[7] = 32'h40a2_d193;
+
+// 8. slti
+// rd(주소값)에 rs1(주소값)의 value < imm이면 1값 else 0값을 Write
+// Expected data : reg(x3) = 1 or 0
+0000_0000_1010_00101_010_00011_0010011
+//rom[8] = 32'h00a2_a193;
+
+// 9. sltiu
+// 여기서 주의할 점은 각각의 값은 MSB extend를 하고나서
+// 비교할 때는 unsigned 값으로 비교를 하게된다. 
+
+// 가령, imm = -1이면 12bit imm = 12'hFFF이고 
+// 이를 32비트로 확장할 때는 32'hFFFF_FFFF인데
+// 비교할 때는 unsigned이기 때문에 imm = 4,294,967,295이된다.
+
+// rd(주소값)에 unsigned(rs1(주소값)의 value) < unsigned(imm)이면
+// 1값 else 0값을 Write
+// Expected data : reg(x3) = 1 or 0
+
+0000_0000_1010_00101_011_00011_0010011
+//rom[9] = 32'h00a2_b193;

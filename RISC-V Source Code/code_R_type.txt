@@ -1,0 +1,53 @@
+// instruction code [32bit]
+// |funct7[7bit]|rs2[5bit]|rs1[5bit]|funct3[3bit]|rd[5bit]|opcode[7bit|]
+// 아래는 전부다 rd = x2, rs1 = x3, rs2 = x4
+
+// 1. ADD : funct7(000_0000),funct3(000)
+// rs1에 있는 값 + rs2에 있는 값 = rd 주소에 값을 Write
+0000000_00100_00011_000_00010_0110011
+
+
+
+
+// 2. SUB : funct7(010_0000), funct3(000)
+// rs1에 있는 값 - rs2에 있는 값 = rd 주소에 값을 Write
+0100000_00100_00011_000_00010_0110011
+
+
+// 3. XOR : funct7(000_0000), funct3(100) 
+// rs1에 있는 값 (XOR: ^) rs2에 있는 값 = rd 주소에 값을 Write
+0000000_00100_00011_100_00010_0110011
+
+
+// 4. OR : funct7(000_0000), funct3(110)
+// rs1에 있는 값 (OR: |) rs2에 있는 값 = rd 주소에 값을 Write
+0000000_00100_00011_110_00010_0110011
+
+
+// 5. AND : funct7(000_0000), funct3(111)
+// rs1에 있는 값 (AND : &) rs2에 있는 값 = rd 주소에 값을 Write
+0000000_00100_00011_111_00010_0110011
+
+// 6. SLL (Shift Left Logical)  : funct7(000_0000), funct3(001)
+// rs1에 있는 값 << rs2에 있는 값 = rd 주소에 값을 Write
+0000000_00100_00011_001_00010_0110011
+
+
+// 7. SRL (Shift Right Logical) : funct7(000_0000), funct3(101)
+// rs1에 있는 값 >> rs2에 있는 값 = rd 주소에 값을 Write
+0000000_00100_00011_101_00010_0110011
+
+
+// 8. SRA (Shift Right Arithmetic) : funct7(010_0000), funct3(101)
+// rs1에 있는 값 >> rs2에 있는 값 = rd 주소에 값(msb extends)을 Write
+0100000_00100_00011_101_00010_0110011
+
+
+// 9. SLT (Set Less Than) : funct7(000_0000), funct3(010)
+//  if (rs1에 있는 값 < rs2에 있는 값) = rd 주소에 값을 1 else 0
+0000000_01010_00011_010_00010_0110011
+
+
+// 10. SLTU (Set Less Than) (U) : funct7(000_0000), funct3(011)
+//  if (rs1에 있는 값 < rs2에 있는 값) = rd 주소에 값(zero extends)을 1 else 0
+0000000_01010_00011_011_00010_0110011
