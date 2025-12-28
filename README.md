@@ -5,7 +5,27 @@
 ## 🔹프로젝트 개요
 
 ---
-
 현대 CPU 설계의 근간이 되는 RISC Architecture에 대한 깊이 있는 이해를 목표로 프로젝트를 시작했습니다. 특히, License 비용 없이 자유로운 설계와 확장이 가능한 오픈소스 ISA인 RISC-V를 선택하여 CPU의 핵심 동작 원리를 구현하며 컴퓨터 구조의 이론적 지식을 실제 하드웨어 설계로 연결하는 경험을 쌓고자 했습니다. 
 
 본 프로젝트는 Harvard Structure의 RV32I기반의 Single Cycle CPU를 SysytemVerilog를 이용해서  통합 설계하고 시뮬레이션을 통해 총 6가지의 명령어 타입을 검증하는 것으로 목표를 했습니다.
+
+
+## 🔹프로젝트 목표
+
+---
+
+**What?** 🎯
+
+- **32-bit Single Cycle RISC-V CPU Core 설계 : SystemVerilog를 이용하여 CPU 설계**
+- **Base Instruction Set 구현 :** RISC-V의 기본 정수 명령어 세트(RV32I)의 핵심인 R, I, S, B, U, J-Type 6가지 명령어 포맷 구현
+- **시뮬레이션을 통한 기능 검증** : 작성된 각 명령어 타입이 의도대로 동작하는지 기능 검증
+- **컴퓨터 핵심 구조 구현** : Instruction Memory와 Data Memory가 분리된 Harvard Structure 구현 및 DataPath와 Control Unit을 설계하며 데이터 흐름과 제어 신호를 이해
+### 🔹System Architecture
+
+---
+
+🔸System Level Block Diagram
+
+![Total Block Diagram2.png](attachment:2bef05cc-d49e-49fc-b93b-0eb53537e341:Total_Block_Diagram2.png)
+
+##
