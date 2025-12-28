@@ -33,12 +33,12 @@ PPT link : [PPT 바로보기](https://www.canva.com/design/DAG0UOiyFqQ/s3u1rJ_PS
 ## 🔹Trouble Shooting 및 배운 점
 ---
 
-1. Data Memory 용량 설정
+**1. Data Memory 용량 설정**
 - 문제상황 : 84번째 명령어에서 ret(JALR)이 되지않고 프로그램 종료 문제
 - 문제원인 : Stack Pointer 초기값을 400으로 설정했지만 메모리 공간 설계는 64(Stack)까지 구현했기 때문에 오버플로우 문제
 - 해결방안 : 해당 Stack까지 메모리 공간 설계
 
-2. RISC-V 설계 의도에 대한 이해
+**2. RISC-V 설계 의도에 대한 이해**
 - 의문점 1 : I-Type에 Substract가 없는 이유가 무엇일까?
 - 의문점 2 : U-Type에서 AUIPC의 역할이 무엇일까?
 
