@@ -34,21 +34,21 @@ PPT link : [PPT 바로보기](https://www.canva.com/design/DAG0UOiyFqQ/s3u1rJ_PS
 ---
 
 1. Data Memory 용량 설정
-문제상황 : 84번째 명령어에서 ret(JALR)이 되지않고 프로그램 종료 문제
-문제원인 : Stack Pointer 초기값을 400으로 설정했지만 메모리 공간 설계는 64(Stack)까지 구현했기 때문에 오버플로우 문제
-해결방안 : 해당 Stack까지 메모리 공간 설계
+- 문제상황 : 84번째 명령어에서 ret(JALR)이 되지않고 프로그램 종료 문제
+- 문제원인 : Stack Pointer 초기값을 400으로 설정했지만 메모리 공간 설계는 64(Stack)까지 구현했기 때문에 오버플로우 문제
+- 해결방안 : 해당 Stack까지 메모리 공간 설계
 
 2. RISC-V 설계 의도에 대한 이해
-의문점 1 : I-Type에 Substract가 없는 이유가 무엇일까?
-의문점 2 : U-Type에서 AUIPC의 역할이 무엇일까?
+- 의문점 1 : I-Type에 Substract가 없는 이유가 무엇일까?
+- 의문점 2 : U-Type에서 AUIPC의 역할이 무엇일까?
 
-결론 : RISC-V의 설계의도는 Compiler와 Linker를 통해서 최적화를 하는 것이다.
+- 결론 : RISC-V의 설계의도는 Compiler와 Linker를 통해서 최적화를 하는 것이다.
 
-설명 : I-Type에 Sub가 없고 R-Type에는 Sub가 있는 이유는 Compile 시점에 아는 값과 모르는 값의 차이가 있기때문이다. I-type의 경우에는 Imm값을 compile시점에 알고 있기 때문에 음수값을 Add하면 되는데 R-Type은 모르기 때문이다. 
+- 설명 : I-Type에 Sub가 없고 R-Type에는 Sub가 있는 이유는 Compile 시점에 아는 값과 모르는 값의 차이가 있기때문이다. I-type의 경우에는 Imm값을 compile시점에 알고 있기 때문에 음수값을 Add하면 되는데 R-Type은 모르기 때문이다. 
 
-또한 U-Type에서 AUIPC는 Instruction Memory PC값과 외부 램의 주소 Imm값을 더해서 내가 원하는 Data가 있는 외부 램의 주소를 나타낼 수 있는지 궁금했다. 이는 결국 Linker가 여러 Object 파일과 Library를 합쳐 하나의 실행파일을 만들이 이를 바탕으로 프로그램 전체에 대한 통합 가상 주소 공간을 설계를 하기 때문에 상대 주소를 알 수 있게 되는 것이다. 
+- 또한 U-Type에서 AUIPC는 Instruction Memory PC값과 외부 램의 주소 Imm값을 더해서 내가 원하는 Data가 있는 외부 램의 주소를 나타낼 수 있는지 궁금했다. 이는 결국 Linker가 여러 Object 파일과 Library를 합쳐 하나의 실행파일을 만들이 이를 바탕으로 프로그램 전체에 대한 통합 가상 주소 공간을 설계를 하기 때문에 상대 주소를 알 수 있게 되는 것이다. 
 
-이를 통해서 단순히 하드웨어의 동작뿐만 아니라 소프트웨어와 하드웨어가 어떻게 유기적으로 동작하는 지 이해할 수 있었다. 
+- 이를 통해서 단순히 하드웨어의 동작뿐만 아니라 소프트웨어와 하드웨어가 어떻게 유기적으로 동작하는 지 이해할 수 있었다. 
 
 
 
