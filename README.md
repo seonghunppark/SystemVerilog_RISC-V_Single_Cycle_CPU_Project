@@ -28,3 +28,8 @@
 
 ![hard](https://github.com/seonghunppark/SystemVerilog_RISC-V_Single_Cycle_CPU_Project/blob/f1bb16b9237d79be8ba893a36aacb0ad9e15a030/Total%20Block%20Diagram.png)
 ##
+## 🔹주요 성과 및 배운 점 (Outcome & Lessons Learned)
+
+---
+
+1.
