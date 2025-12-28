@@ -25,8 +25,8 @@ PPT link : [PPT 바로보기](https://www.canva.com/design/DAG0UOiyFqQ/s3u1rJ_PS
 
 🔸System Level Block Diagram
 ![hard](https://github.com/seonghunppark/SystemVerilog_RISC-V_Single_Cycle_CPU_Project/blob/f1bb16b9237d79be8ba893a36aacb0ad9e15a030/Total%20Block%20Diagram.png)
-##
-## 🔹Trouble Shooting 및 배운 점
+
+### 🔹Trouble Shooting 및 배운 점
 ---
 
 **1. Data Memory 용량 설정**
