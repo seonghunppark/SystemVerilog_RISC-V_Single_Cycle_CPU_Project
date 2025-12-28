@@ -26,6 +26,6 @@
 
 🔸System Level Block Diagram
 
-![Total Block Diagram2.png](attachment:2bef05cc-d49e-49fc-b93b-0eb53537e341:Total_Block_Diagram2.png)
+![Total Block Diagram2.png]([attachment:2bef05cc-d49e-49fc-b93b-0eb53537e341:Total_Block_Diagram2.png](https://github.com/seonghunppark/SystemVerilog_RISC-V_Single_Cycle_CPU_Project/blob/f1bb16b9237d79be8ba893a36aacb0ad9e15a030/Total%20Block%20Diagram.png))
 
 ##
