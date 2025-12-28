@@ -1,7 +1,7 @@
 # SystemVerilog_RISC-V_Single_Cycle_CPU_Project
 미니프로젝트 : SystemVerilog를 이용하여 RV32I 명령어 기반 Single Cycle CPU 설계 및 검증
 
-PPT link : ![PPT 바로보기]([https://www.canva.com/design/DAG0UOiyFqQ/s3u1rJ_PSrFhDyJslErOAA/viewutm_content=DAG0UOiyFqQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1cc924753e](https://www.canva.com/design/DAG0UOiyFqQ/s3u1rJ_PSrFhDyJslErOAA/view?utm_content=DAG0UOiyFqQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1cc924753e))
+PPT link : ![PPT 바로보기](https://www.canva.com/design/DAG0UOiyFqQ/s3u1rJ_PSrFhDyJslErOAA/view?utm_content=DAG0UOiyFqQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1cc924753e)
 
 
 ## 🔹프로젝트 개요
