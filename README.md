@@ -5,7 +5,6 @@ PPT link : [PPT 바로보기](https://www.canva.com/design/DAG0UOiyFqQ/s3u1rJ_PS
 
 
 ## 🔹프로젝트 개요
-
 ---
 현대 CPU 설계의 근간이 되는 RISC Architecture에 대한 깊이 있는 이해를 목표로 프로젝트를 시작했습니다. 특히, License 비용 없이 자유로운 설계와 확장이 가능한 오픈소스 ISA인 RISC-V를 선택하여 CPU의 핵심 동작 원리를 구현하며 컴퓨터 구조의 이론적 지식을 실제 하드웨어 설계로 연결하는 경험을 쌓고자 했습니다. 
 
@@ -13,7 +12,6 @@ PPT link : [PPT 바로보기](https://www.canva.com/design/DAG0UOiyFqQ/s3u1rJ_PS
 
 
 ## 🔹프로젝트 목표
-
 ---
 
 **What?** 🎯
@@ -23,11 +21,9 @@ PPT link : [PPT 바로보기](https://www.canva.com/design/DAG0UOiyFqQ/s3u1rJ_PS
 - **시뮬레이션을 통한 기능 검증** : 작성된 각 명령어 타입이 의도대로 동작하는지 기능 검증
 - **컴퓨터 핵심 구조 구현** : Instruction Memory와 Data Memory가 분리된 Harvard Structure 구현 및 DataPath와 Control Unit을 설계하며 데이터 흐름과 제어 신호를 이해
 ### 🔹System Architecture
-
 ---
 
 🔸System Level Block Diagram
-
 ![hard](https://github.com/seonghunppark/SystemVerilog_RISC-V_Single_Cycle_CPU_Project/blob/f1bb16b9237d79be8ba893a36aacb0ad9e15a030/Total%20Block%20Diagram.png)
 ##
 ## 🔹Trouble Shooting 및 배운 점
